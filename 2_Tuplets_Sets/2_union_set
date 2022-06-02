@@ -1,0 +1,16 @@
+my_list = list()
+
+n, m = input().split()
+n = int(n)
+m = int(m)
+
+for _ in range(n+m):
+    my_list.append(input())
+
+first_set = set((my_list[:n]))
+second_set = set((my_list[m:]))
+
+union = (first_set&second_set)
+my_list = list(int(i) for i in union)
+for i in range(len(my_list)):
+    print(my_list[i])
